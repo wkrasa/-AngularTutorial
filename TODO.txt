@@ -1,0 +1,12 @@
+- create APP
+- creaet library
+- add to git
+- routing
+- lazy loaded modules
+- forRoot, forChild
+- portal 
+-- component
+-- template
+-- service
+- overlay
+- - dialog
