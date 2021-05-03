@@ -2,11 +2,15 @@
 - creaet library
 - add to git
 - routing
-- lazy loaded modules
+-- resolvers
+-- lazy loaded modules
 - forRoot, forChild
+-dependancy injection
+-- tokens
+- media queries
 - portal 
 -- component
 -- template
 -- service
 - overlay
-- - dialog
+-- dialog
