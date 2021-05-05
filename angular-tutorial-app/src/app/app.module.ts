@@ -7,16 +7,21 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { PortalModule } from '@angular/cdk/portal';
+import { ThirdComponent } from './third/third.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
-    SecondComponent
+    SecondComponent,
+    ThirdComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    PortalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

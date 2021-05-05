@@ -13,7 +13,7 @@ import { InnerLazySecondComponent } from './inner-lazy-second/inner-lazy-second.
   ],
   imports: [
     CommonModule,
-    LazyRoutingModule
+    LazyRoutingModule,
   ]
 })
 export class LazyModule { }

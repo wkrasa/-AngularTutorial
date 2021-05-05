@@ -1,1 +1,10 @@
-<p>first works!</p>
+<p>{{message}}</p>
+
+
+
+<div *cdkPortal>
+  <div>
+    portal: {{message}}
+    <button (click)="message=message + 123">Update message</button>
+  </div>
+</div>

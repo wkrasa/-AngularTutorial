@@ -2,7 +2,9 @@
 <button routerLink="inner-lazy">lazy-inner</button>
 <button routerLink="inner-lazy-second">lazy-inner</button>
 <a [routerLink]="[{ outlets: { secondary: ['secondary-inner-lazy-second'] } }]">Secondary</a>
-<button routerLink="../second">Back to second</button>
+<button [routerLink]="[{ outlets: { secondary: null } }]">Back to second</button>
+<button routerLink="../second">second</button>
+<button routerLink="second">second</button>
 <div class='secondary-outlet'>
   <router-outlet></router-outlet>
 </div>

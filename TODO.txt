@@ -1,9 +1,11 @@
-- create APP
-- creaet library
-- add to git
++ create APP
+- create library
+-- create folder structure: shared, core
+-- in this library add modul for importing all material modules
++ add to git
 - routing
 -- resolvers
--- lazy loaded modules
+-+ lazy loaded modules
 - forRoot, forChild
 -dependancy injection
 -- tokens
