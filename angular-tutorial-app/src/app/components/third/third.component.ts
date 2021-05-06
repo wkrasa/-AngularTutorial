@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { PortalService } from '../services/portal-service/portal.service';
+import { PortalService } from '../../services/portal-service/portal.service';
 
 @Component({
   selector: 'at-third',

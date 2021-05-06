@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
+import { FirstComponent } from './components/first/first.component';
+import { OverlayComponent } from './components/overlay/overlay.component';
+import { SecondComponent } from './components/second/second.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'second',
     component: SecondComponent
+  },
+  {
+    path: 'overlay',
+    component: OverlayComponent
   },
   { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
   {

@@ -3,6 +3,7 @@
 -- create folder structure: shared, core
 -- in this library add modul for importing all material modules
 + add to git
+- use material elements (buttons, toolbar, ...)
 - routing
 -- resolvers
 -+ lazy loaded modules
@@ -12,7 +13,9 @@
 - media queries
 - portal 
 -- component
--- template
--- service
++- template
++- service
 - overlay
 -- dialog
+- add store
+-- entities

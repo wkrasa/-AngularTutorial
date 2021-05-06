@@ -1,0 +1,14 @@
+<p>overlay works!</p>
+<mat-form-field appearance="fill" class="drop-down-input" [class.drop-down-input-active]="showPanel$ | async"  cdkOverlayOrigin #originOerlay="cdkOverlayOrigin">
+  <mat-icon matPrefix>search</mat-icon>
+  <mat-label>Search</mat-label>
+  <input matInput name="drop-down-search" placeholder="Start to type..."/>
+  <mat-icon matSuffix>arrow_drop_down</mat-icon>
+</mat-form-field>
+<ng-template
+  cdkConnectedOverlay
+  cdkConnectedOverlayHasBackdrop
+  [cdkConnectedOverlayOrigin]="originOerlay"
+  [cdkConnectedOverlayOpen]="showPanel$ | async" >
+  <section class="drop-down-search-panel mat-elevation-z1">My panel</section>
+</ng-template>

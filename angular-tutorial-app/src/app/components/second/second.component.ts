@@ -1,18 +1,18 @@
 import { CdkPortal, TemplatePortal } from '@angular/cdk/portal';
 import { AfterViewInit, Component, OnDestroy, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
-import { PortalService } from '../services/portal-service/portal.service';
+import { PortalService } from '../../services/portal-service/portal.service';
 
 @Component({
-  selector: 'at-first-component',
-  templateUrl: './first.component.html',
-  styleUrls: ['./first.component.scss']
+  selector: 'at-second-component',
+  templateUrl: './second.component.html',
+  styleUrls: ['./second.component.scss']
 })
-export class FirstComponent implements OnInit, OnDestroy, AfterViewInit  {
+export class SecondComponent implements OnInit, OnDestroy, AfterViewInit   {
 
   @ViewChild(CdkPortal, {static: true})
   portalContent: CdkPortal;
 
-  message = "first works!";
+  message = "second works!";
 
   constructor(public portalService: PortalService,
     private viewContainerRef: ViewContainerRef) { }
@@ -22,15 +22,10 @@ export class FirstComponent implements OnInit, OnDestroy, AfterViewInit  {
   }
 
   ngAfterViewInit(): void {
-
-  }
-
-  setPortal(){
-
+    this.portalService.setPortal(this.portalContent);
   }
 
   ngOnDestroy(): void {
     this.portalContent.detach();
   }
-
 }
