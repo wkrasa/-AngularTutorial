@@ -1,11 +1,13 @@
 import { CdkPortal, TemplatePortal } from '@angular/cdk/portal';
 import { AfterViewInit, Component, OnDestroy, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { ExtendedLoggerService } from 'src/app/services/extended-logger.service';
+import { LoggerService } from 'src/app/services/logger.service';
 import { PortalService } from '../../services/portal-service/portal.service';
 
 @Component({
   selector: 'at-first-component',
   templateUrl: './first.component.html',
-  styleUrls: ['./first.component.scss']
+  styleUrls: ['./first.component.scss'],
 })
 export class FirstComponent implements OnInit, OnDestroy, AfterViewInit  {
 
@@ -14,10 +16,13 @@ export class FirstComponent implements OnInit, OnDestroy, AfterViewInit  {
 
   message = "first works!";
 
-  constructor(public portalService: PortalService,
+  constructor(
+    public portalService: PortalService,
+    private logger: LoggerService,
     private viewContainerRef: ViewContainerRef) { }
 
   ngOnInit(): void {
+    this.logger.log('FirstComponent');
     this.portalService.setPortal(this.portalContent);
   }
 

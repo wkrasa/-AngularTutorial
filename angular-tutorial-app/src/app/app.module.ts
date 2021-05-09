@@ -30,6 +30,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
+import { LoggerService } from './services/logger.service';
+import { ExtendedLoggerService } from './services/extended-logger.service';
+import { AppConfig, APP_CONFIG } from './app.config';
 
 @NgModule({
   declarations: [
@@ -68,7 +71,16 @@ import { MatIconModule } from '@angular/material/icon';
      MatTabsModule,
      MatIconModule,
   ],
-  providers: [],
+  providers: [{
+      provide: LoggerService,
+      useFactory: (config: AppConfig) =>{
+          return config.useExtendLoger ? new ExtendedLoggerService() : new LoggerService()
+      },
+      deps: [APP_CONFIG]
+  },
+   // LoggerService
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

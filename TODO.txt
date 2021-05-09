@@ -1,7 +1,7 @@
 + create APP
 - create library
 -- create folder structure: shared, core
--- in this library add modul for importing all material modules
+-- in this library add module for importing all material modules
 + add to git
 - use material elements (buttons, toolbar, ...)
 - routing
@@ -9,7 +9,7 @@
 -+ lazy loaded modules
 - forRoot, forChild
 -dependancy injection
--- tokens
+-- useClass, useExisting, useFactory, useValue,tokens, multi
 - media queries
 - portal 
 -- component

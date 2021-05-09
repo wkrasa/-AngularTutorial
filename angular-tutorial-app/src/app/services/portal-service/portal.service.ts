@@ -14,7 +14,6 @@ export class PortalService {
   constructor() { }
 
   setPortal(template: TemplatePortal){
-    console.log('portal set');
     this.portal.next(template);
   }
 }

@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
+import { AppConfig, APP_CONFIG } from './app.config';
 import { PortalService } from './services/portal-service/portal.service';
 
 @Component({
@@ -9,7 +10,9 @@ import { PortalService } from './services/portal-service/portal.service';
 export class AppComponent implements OnInit  {
   title = 'angular-tutorial-app';
 
-  constructor(private portalService: PortalService){
+  constructor(private portalService: PortalService,
+      @Inject(APP_CONFIG) private appConfig: AppConfig){
+        console.log(appConfig);
 
   }
 
