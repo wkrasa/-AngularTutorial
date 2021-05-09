@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FirstComponent } from './components/first/first.component';
+import { InjectorsHierarchyComponent } from './components/injectors-hierarchy/injectors-hierarchy.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
 import { SecondComponent } from './components/second/second.component';
 
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'overlay',
     component: OverlayComponent
+  },
+  {
+    path: 'injectors-hierarchy',
+    component: InjectorsHierarchyComponent
   },
   { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
   {

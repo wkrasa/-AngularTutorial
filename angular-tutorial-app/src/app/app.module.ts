@@ -33,6 +33,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { LoggerService } from './services/logger.service';
 import { ExtendedLoggerService } from './services/extended-logger.service';
 import { AppConfig, APP_CONFIG } from './app.config';
+import { InjectorsHierarchyComponent } from './components/injectors-hierarchy/injectors-hierarchy.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { AppConfig, APP_CONFIG } from './app.config';
     SecondComponent,
     ThirdComponent,
     OverlayComponent,
+    InjectorsHierarchyComponent,
   ],
   imports: [
     BrowserModule,
