@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PollingService } from '../modules/configurable';
 
 @Component({
   selector: 'app-lazy',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LazyComponent implements OnInit {
 
-  constructor() { }
+  constructor(public pollingService: PollingService,) { }
 
   ngOnInit(): void {
   }

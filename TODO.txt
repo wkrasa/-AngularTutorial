@@ -7,15 +7,14 @@
 - routing
 -- resolvers
 -+ lazy loaded modules
-- forRoot, forChild
--dependancy injection
++ forRoot, forChild
++dependancy injection
 -- useClass, useExisting, useFactory, useValue,tokens, multi
 - media queries
-- portal 
--- component
++ portal 
 +- template
 +- service
-- overlay
--- dialog
++ overlay
++- select control
 - add store
 -- entities

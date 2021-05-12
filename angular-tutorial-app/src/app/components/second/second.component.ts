@@ -1,5 +1,6 @@
 import { CdkPortal, TemplatePortal } from '@angular/cdk/portal';
 import { AfterViewInit, Component, OnDestroy, OnInit, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { PollingService } from 'src/app/modules/configurable';
 import { LoggerService } from 'src/app/services/logger.service';
 import { PortalService } from '../../services/portal-service/portal.service';
 
@@ -18,6 +19,7 @@ export class SecondComponent implements OnInit, OnDestroy, AfterViewInit   {
   constructor(
     public portalService: PortalService,
     private logger: LoggerService,
+    public pollingService: PollingService,
     private viewContainerRef: ViewContainerRef) { }
 
   ngOnInit(): void {

@@ -34,6 +34,7 @@ import { LoggerService } from './services/logger.service';
 import { ExtendedLoggerService } from './services/extended-logger.service';
 import { AppConfig, APP_CONFIG } from './app.config';
 import { InjectorsHierarchyComponent } from './components/injectors-hierarchy/injectors-hierarchy.component';
+import { ConfigurableModule } from './modules/configurable';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { InjectorsHierarchyComponent } from './components/injectors-hierarchy/in
      MatTableModule,
      MatTabsModule,
      MatIconModule,
+     ConfigurableModule.forRoot()//.forChild({interval: 50})
   ],
   providers: [{
       provide: LoggerService,

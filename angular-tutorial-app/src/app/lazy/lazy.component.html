@@ -1,4 +1,5 @@
 <p>lazy works!</p>
+<div>polling: {{pollingService.interval$ | async}}</div>
 <button routerLink="inner-lazy">lazy-inner</button>
 <button routerLink="inner-lazy-second">lazy-inner</button>
 <a [routerLink]="[{ outlets: { secondary: ['secondary-inner-lazy-second'] } }]">Secondary</a>
