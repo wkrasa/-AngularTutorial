@@ -5,8 +5,9 @@
 + add to git
 - use material elements (buttons, toolbar, ...)
 - routing
--- resolvers
+-+ resolvers
 -+ lazy loaded modules
+-- guards
 + forRoot, forChild
 +dependancy injection
 -- useClass, useExisting, useFactory, useValue,tokens, multi

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InnerLazySecondComponent } from './inner-lazy-second/inner-lazy-second.component';
 import { LazyComponent } from './lazy.component';
+import { UserComponent } from './user/user.component';
+import { UserResolver } from './user/user.resolver';
 
 const routes: Routes = [
   {
@@ -15,6 +17,11 @@ const routes: Routes = [
       {
         path: 'inner-lazy-second',
         component: InnerLazySecondComponent
+      },
+      {
+        path: 'user/:id',
+        component: UserComponent,
+        resolve: {user: UserResolver}
       },
       {
         path: '**',
