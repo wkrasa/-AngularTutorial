@@ -1,0 +1,36 @@
+:host{
+  display: block;
+  padding: 20px;
+
+  .legend{
+    box-sizing: border-box;
+    height: 40px;
+    margin: 5px 0;
+    padding: 5px;
+    border-top: solid 1px gray;
+    border-bottom: solid 1px gray;
+    background: #efefef;
+    display: flex;
+    align-items: center;
+
+    button{
+      margin: 2px;
+    }
+  }
+
+  .row{
+    display: flex;
+
+    .cell{
+      box-sizing: border-box;
+      border:  solid 1px gray;
+      width: 20px;
+      height: 20px;
+      background: #cdcdcd;
+      &.visited{
+        background: green;
+      }
+    }
+  }
+}
+

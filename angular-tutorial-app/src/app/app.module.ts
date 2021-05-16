@@ -35,6 +35,7 @@ import { ExtendedLoggerService } from './services/extended-logger.service';
 import { AppConfig, APP_CONFIG } from './app.config';
 import { InjectorsHierarchyComponent } from './components/injectors-hierarchy/injectors-hierarchy.component';
 import { ConfigurableModule } from './modules/configurable';
+import { FillComponent } from './components/fill/fill.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ConfigurableModule } from './modules/configurable';
     ThirdComponent,
     OverlayComponent,
     InjectorsHierarchyComponent,
+    FillComponent,
   ],
   imports: [
     BrowserModule,
