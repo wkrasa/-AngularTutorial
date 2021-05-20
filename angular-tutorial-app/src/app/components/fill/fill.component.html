@@ -3,7 +3,7 @@
   step: step$ | async
 } data">Fill</div>
 <div *ngFor="let row of board.rows" class="row">
-  <div *ngFor="let cell of row.cells" class="cell" [class.visited]="cell.isVisited" (click)="board.visit(cell)">
+  <div *ngFor="let cell of row.cells" class="cell" [class.visited]="cell.isVisited" (click)="board.swap(cell)">
   </div>
 </div>
 

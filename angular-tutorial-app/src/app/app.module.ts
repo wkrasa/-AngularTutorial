@@ -36,6 +36,7 @@ import { AppConfig, APP_CONFIG } from './app.config';
 import { InjectorsHierarchyComponent } from './components/injectors-hierarchy/injectors-hierarchy.component';
 import { ConfigurableModule } from './modules/configurable';
 import { FillComponent } from './components/fill/fill.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { FillComponent } from './components/fill/fill.component';
     OverlayComponent,
     InjectorsHierarchyComponent,
     FillComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

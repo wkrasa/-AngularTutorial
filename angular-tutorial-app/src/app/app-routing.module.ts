@@ -3,8 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { FillComponent } from './components/fill/fill.component';
 import { FirstComponent } from './components/first/first.component';
 import { InjectorsHierarchyComponent } from './components/injectors-hierarchy/injectors-hierarchy.component';
+import { LoginComponent } from './components/login/login.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
 import { SecondComponent } from './components/second/second.component';
+import { AuthGuardService } from './route-guards/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -17,11 +19,16 @@ const routes: Routes = [
   },
   {
     path: 'overlay',
-    component: OverlayComponent
+    component: OverlayComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'fill',
     component: FillComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'injectors-hierarchy',

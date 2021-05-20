@@ -36,8 +36,12 @@ export class Board{
     return this.rows[y].cells[x];
   }
 
-  visit(cells: Cell){
-    cells.isVisited = true;
+  visit(cell: Cell){
+    cell.isVisited = true;
+  }
+
+  swap(cell: Cell){
+    cell.isVisited = !cell.isVisited;
   }
 
   visitXY(x: number, y: number){

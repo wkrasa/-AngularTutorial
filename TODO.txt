@@ -4,13 +4,14 @@
 -- in this library add module for importing all material modules
 + add to git
 - use material elements (buttons, toolbar, ...)
-- routing
--+ resolvers
--+ lazy loaded modules
--- guards
++ routing
++_ resolvers
++- lazy loaded modules
++- guards
+-- pass parmas (read more about router, activated snapshot and routing)
 + forRoot, forChild
 +dependancy injection
--- useClass, useExisting, useFactory, useValue,tokens, multi
++- useClass, useExisting, useFactory, useValue,tokens, multi
 - media queries
 + portal 
 +- template
@@ -19,3 +20,5 @@
 +- select control
 - add store
 -- entities
+- Add Angualr material styles
+- dynamic components (factory): https://www.angular.love/2016/12/27/angular-2-dynamic-component-tworzymy-dynamiczne-komponenty/

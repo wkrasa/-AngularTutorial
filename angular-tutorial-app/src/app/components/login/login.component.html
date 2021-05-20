@@ -1,0 +1,5 @@
+<div>
+  <p>You cannot acces this route, please login first! </p>
+<button *ngIf="!authService.isLoggedIn" (click)="authService.logIn();">Login</button>
+<button *ngIf="authService.isLoggedIn" (click)="authService.logOut();">Logout</button>
+</div>

@@ -1,3 +1,7 @@
+<div>
+  <p>Is user loggedin: {{authService.isLoggedIn}} <button *ngIf="authService.isLoggedIn" (click)="authService.logOut();">Logout</button></p>
+
+</div>
 <button routerLink="first">First</button>
 <button routerLink="second">Second</button>
 <button routerLink="lazy">Lazy</button>
@@ -6,4 +10,5 @@
 <button routerLink="injectors-hierarchy">Injectors hierarchy</button>
 <router-outlet></router-outlet>
 <at-third></at-third>
+
 
