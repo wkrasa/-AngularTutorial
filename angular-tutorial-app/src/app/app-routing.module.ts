@@ -5,6 +5,7 @@ import { FirstComponent } from './components/first/first.component';
 import { InjectorsHierarchyComponent } from './components/injectors-hierarchy/injectors-hierarchy.component';
 import { LoginComponent } from './components/login/login.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
+import { ParentComponent } from './components/performance/parent/parent.component';
 import { SecondComponent } from './components/second/second.component';
 import { AuthGuardService } from './route-guards/auth-guard.service';
 
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'fill',
     component: FillComponent
+  },
+  {
+    path: 'performance',
+    component: ParentComponent
   },
   {
     path: 'login',

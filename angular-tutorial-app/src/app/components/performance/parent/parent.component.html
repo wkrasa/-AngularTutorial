@@ -1,0 +1,7 @@
+<div>
+  <p>{{message}}</p>
+  <p>{{message2}}</p>
+  <button (click)="updateMessage()">Update</button>
+  <button (click)="recreateModels()">Reset</button>
+</div>
+<at-child *ngFor="let model of models; trackBy: trackByFn" [model]="model"></at-child>

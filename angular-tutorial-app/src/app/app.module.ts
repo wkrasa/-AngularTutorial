@@ -37,6 +37,8 @@ import { InjectorsHierarchyComponent } from './components/injectors-hierarchy/in
 import { ConfigurableModule } from './modules/configurable';
 import { FillComponent } from './components/fill/fill.component';
 import { LoginComponent } from './components/login/login.component';
+import { ParentComponent } from './components/performance/parent/parent.component';
+import { ChildComponent } from './components/performance/child/child.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { LoginComponent } from './components/login/login.component';
     InjectorsHierarchyComponent,
     FillComponent,
     LoginComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
