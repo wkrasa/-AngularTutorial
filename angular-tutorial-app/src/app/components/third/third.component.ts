@@ -29,4 +29,8 @@ export class ThirdComponent implements OnInit {
     this.portal$ = this.portalService.portal$;
   }
 
+  onIconPickerSelect(newIcon){
+    console.log(newIcon);
+  }
+
 }

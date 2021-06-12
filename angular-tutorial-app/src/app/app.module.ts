@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortalModule } from '@angular/cdk/portal';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { A11yModule } from '@angular/cdk/a11y';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { ThirdComponent } from './components/third/third.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
@@ -30,6 +31,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 import { LoggerService } from './services/logger.service';
 import { ExtendedLoggerService } from './services/extended-logger.service';
 import { AppConfig, APP_CONFIG } from './app.config';
@@ -39,6 +41,7 @@ import { FillComponent } from './components/fill/fill.component';
 import { LoginComponent } from './components/login/login.component';
 import { ParentComponent } from './components/performance/parent/parent.component';
 import { ChildComponent } from './components/performance/child/child.component';
+import { DragAndDropComponent } from './components/drag-and-drop/drag-and-drop.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +55,7 @@ import { ChildComponent } from './components/performance/child/child.component';
     LoginComponent,
     ParentComponent,
     ChildComponent,
+    DragAndDropComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +66,7 @@ import { ChildComponent } from './components/performance/child/child.component';
     PortalModule,
     OverlayModule,
     A11yModule,
+    DragDropModule,
 
      // Material modules
      MatButtonModule,
@@ -81,6 +86,7 @@ import { ChildComponent } from './components/performance/child/child.component';
      MatTableModule,
      MatTabsModule,
      MatIconModule,
+     MatCardModule,
      ConfigurableModule.forRoot()//.forChild({interval: 50})
   ],
   providers: [{

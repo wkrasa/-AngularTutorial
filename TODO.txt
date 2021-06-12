@@ -5,7 +5,7 @@
 + add to git
 - use material elements (buttons, toolbar, ...)
 + routing
-+_ resolvers
++- resolvers
 +- lazy loaded modules
 +- guards
 -- pass parmas (read more about router, activated snapshot and routing)
@@ -22,3 +22,6 @@
 -- entities
 - Add Angualr material styles
 - dynamic components (factory): https://www.angular.love/2016/12/27/angular-2-dynamic-component-tworzymy-dynamiczne-komponenty/
+- Design patterns
+- configure CLI via angular.json file
+- drag and drop

@@ -1,0 +1,12 @@
+:host{
+  display: flex;
+  .column-container{
+    min-width: 400px;
+    .list{
+      height: 100%;
+      .list-item{
+        margin: 4px;
+      }
+    }
+  }
+}
