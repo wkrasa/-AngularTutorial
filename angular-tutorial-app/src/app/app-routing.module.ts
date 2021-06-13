@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DragAndDropComponent } from './components/drag-and-drop/drag-and-drop.component';
+import { DynamicComponentsComponent } from './components/dynamic-components/dynamic-components.component';
 import { FillComponent } from './components/fill/fill.component';
 import { FirstComponent } from './components/first/first.component';
 import { InjectorsHierarchyComponent } from './components/injectors-hierarchy/injectors-hierarchy.component';
@@ -43,6 +44,10 @@ const routes: Routes = [
   {
     path: 'drag-and-drop',
     component: DragAndDropComponent
+  },
+  {
+    path: 'dynamic',
+    component: DynamicComponentsComponent
   },
   { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
   {

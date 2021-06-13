@@ -42,6 +42,12 @@ import { LoginComponent } from './components/login/login.component';
 import { ParentComponent } from './components/performance/parent/parent.component';
 import { ChildComponent } from './components/performance/child/child.component';
 import { DragAndDropComponent } from './components/drag-and-drop/drag-and-drop.component';
+import { DynamicComponentsComponent } from './components/dynamic-components/dynamic-components.component';
+import { ViewContainerDirective } from './components/dynamic-components/view-container-directive';
+import { ChildOneComponent } from './components/dynamic-components/children/child-one/child-one.component';
+import { ChildTwoComponent } from './components/dynamic-components/children/child-two/child-two.component';
+import { ChildThreeComponent } from './components/dynamic-components/children/child-three/child-three.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -56,11 +62,18 @@ import { DragAndDropComponent } from './components/drag-and-drop/drag-and-drop.c
     ParentComponent,
     ChildComponent,
     DragAndDropComponent,
+    DynamicComponentsComponent,
+    ViewContainerDirective,
+    ChildOneComponent,
+    ChildTwoComponent,
+    ChildThreeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
 
     // cdk
     PortalModule,
@@ -87,6 +100,7 @@ import { DragAndDropComponent } from './components/drag-and-drop/drag-and-drop.c
      MatTabsModule,
      MatIconModule,
      MatCardModule,
+     MatRadioModule,
      ConfigurableModule.forRoot()//.forChild({interval: 50})
   ],
   providers: [{

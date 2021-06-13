@@ -21,7 +21,7 @@
 - add store
 -- entities
 - Add Angualr material styles
-- dynamic components (factory): https://www.angular.love/2016/12/27/angular-2-dynamic-component-tworzymy-dynamiczne-komponenty/
+!- dynamic components (factory): https://www.angular.love/2016/12/27/angular-2-dynamic-component-tworzymy-dynamiczne-komponenty/
 - Design patterns
 - configure CLI via angular.json file
-- drag and drop
++ drag and drop

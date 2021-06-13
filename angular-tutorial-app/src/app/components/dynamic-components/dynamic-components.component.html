@@ -1,0 +1,15 @@
+<p>dynamic-components works!</p>
+<div class="form" [formGroup]="form">
+  <mat-radio-group  formControlName="selectedComponent">
+    <mat-radio-button value="1">One</mat-radio-button>
+    <mat-radio-button value="2">Two</mat-radio-button>
+    <mat-radio-button value="3">Three</mat-radio-button>
+  </mat-radio-group>
+  <mat-form-field>
+    <input matInput formControlName="propInput">
+  </mat-form-field>
+</div>
+
+<div class="container">
+  <ng-template viewContainer></ng-template>
+</div>
