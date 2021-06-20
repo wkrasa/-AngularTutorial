@@ -1,0 +1,18 @@
+.double-value{
+  width: 20px;
+  height: 20px;
+  border: solid 4px gray;
+  box-sizing: border-box;
+
+  &.selected {
+    background-color: green;
+  }
+
+  &.not-selected {
+    background-color: red;
+  }
+
+  &.disabled {
+    background-color: #cdcdcd;
+  }
+}

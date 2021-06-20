@@ -1,0 +1,10 @@
+<p>value-accessor works!</p>
+<form  [formGroup]="form">
+  <mat-form-field>
+    <input matInput formControlName="val">
+  </mat-form-field>
+
+  <app-double-value formControlName="val2"></app-double-value>
+  <button >Save</button>
+</form>
+<p>{{form.value | json}}</p>

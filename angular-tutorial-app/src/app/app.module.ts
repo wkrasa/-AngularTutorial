@@ -48,6 +48,8 @@ import { ChildOneComponent } from './components/dynamic-components/children/chil
 import { ChildTwoComponent } from './components/dynamic-components/children/child-two/child-two.component';
 import { ChildThreeComponent } from './components/dynamic-components/children/child-three/child-three.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ValueAccessorComponent } from './components/form/value-accessor/value-accessor.component';
+import { DoubleValueComponent } from './components/form/double-value/double-value.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +69,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ChildOneComponent,
     ChildTwoComponent,
     ChildThreeComponent,
+    ValueAccessorComponent,
+    DoubleValueComponent,
   ],
   imports: [
     BrowserModule,

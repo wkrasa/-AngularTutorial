@@ -21,7 +21,12 @@
 - add store
 -- entities
 - Add Angualr material styles
-!- dynamic components (factory): https://www.angular.love/2016/12/27/angular-2-dynamic-component-tworzymy-dynamiczne-komponenty/
++- dynamic components (factory): https://www.angular.love/2016/12/27/angular-2-dynamic-component-tworzymy-dynamiczne-komponenty/
 - Design patterns
 - configure CLI via angular.json file
 + drag and drop
+- component testing
+- create popup component + directive
+- template forms vs reactive forms
+- form: value accessor: https://www.youtube.com/watch?v=OrmIfW8Ak3w&list=PLX7eV3JL9sfkREmy-qxyNqLw73y76nOHm&index=9&ab_channel=DecodedFrontend
+- Custom Form Field Control :https://www.youtube.com/watch?v=8ThVof0Rz64&list=PLX7eV3JL9sfkREmy-qxyNqLw73y76nOHm&index=8&ab_channel=DecodedFrontend
