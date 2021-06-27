@@ -1,0 +1,17 @@
+:host {
+  display: block;
+
+  >div{
+    display: flex;
+  }
+
+  mat-icon{
+    display: none;
+  }
+}
+
+:host.floated{
+  mat-icon{
+    display: block;
+  }
+}

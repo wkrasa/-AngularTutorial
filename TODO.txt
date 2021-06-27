@@ -28,5 +28,6 @@
 - component testing
 - create popup component + directive
 - template forms vs reactive forms
-- form: value accessor: https://www.youtube.com/watch?v=OrmIfW8Ak3w&list=PLX7eV3JL9sfkREmy-qxyNqLw73y76nOHm&index=9&ab_channel=DecodedFrontend
++ form: value accessor: https://www.youtube.com/watch?v=OrmIfW8Ak3w&list=PLX7eV3JL9sfkREmy-qxyNqLw73y76nOHm&index=9&ab_channel=DecodedFrontend
 - Custom Form Field Control :https://www.youtube.com/watch?v=8ThVof0Rz64&list=PLX7eV3JL9sfkREmy-qxyNqLw73y76nOHm&index=8&ab_channel=DecodedFrontend
+- play with change detection: deattach, reattach, onPush, markForCheck, detectChanges, ngZone (https://www.mokkapps.de/blog/the-last-guide-for-angular-change-detection-you-will-ever-need/)

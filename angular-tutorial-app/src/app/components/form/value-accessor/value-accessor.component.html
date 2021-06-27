@@ -5,6 +5,16 @@
   </mat-form-field>
 
   <app-double-value formControlName="val2"></app-double-value>
+  <mat-form-field>
+    <app-custom-control
+      [required]="true"
+      formControlName="val3"
+      placeholder="Enter new value">
+    </app-custom-control>
+  </mat-form-field>
+  <hr/>
   <button >Save</button>
 </form>
 <p>{{form.value | json}}</p>
+
+

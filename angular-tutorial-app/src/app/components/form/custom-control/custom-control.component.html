@@ -1,0 +1,10 @@
+<div>
+  <input
+    #input
+    type="number"
+    matInput
+    autocomplete="off"
+    [value]="value?.value"
+    [disabled]="disabled"
+    [placeholder]="placeholder" (change)="valueChanged(input.value)">
+</div>

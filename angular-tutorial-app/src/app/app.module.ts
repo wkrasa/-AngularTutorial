@@ -50,6 +50,8 @@ import { ChildThreeComponent } from './components/dynamic-components/children/ch
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValueAccessorComponent } from './components/form/value-accessor/value-accessor.component';
 import { DoubleValueComponent } from './components/form/double-value/double-value.component';
+import { CustomControlComponent } from './components/form/custom-control/custom-control.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -71,8 +73,10 @@ import { DoubleValueComponent } from './components/form/double-value/double-valu
     ChildThreeComponent,
     ValueAccessorComponent,
     DoubleValueComponent,
+    CustomControlComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

@@ -10,8 +10,9 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class ValueAccessorComponent implements OnInit {
 
   form = new FormGroup({
-    val: new FormControl({ value: '123'}),
+    val: new FormControl('123'),
     val2: new FormControl({ value: true, disabled: false}),
+    val3: new FormControl({ value: { value: 123}, disabled: false}),
   });
   constructor() { }
 
