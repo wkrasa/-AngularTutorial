@@ -1,6 +1,7 @@
 import { FocusMonitor } from '@angular/cdk/a11y';
-import { Component, OnInit, ChangeDetectionStrategy, Input, HostBinding, ViewChild, ElementRef, OnDestroy } from '@angular/core';
-import { ControlValueAccessor, NgControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, OnInit, ChangeDetectionStrategy, Input, HostBinding, ViewChild, ElementRef, OnDestroy, Optional, Self } from '@angular/core';
+import { ControlValueAccessor, FormControl, NgControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
 import { MatFormFieldControl } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 import { Subject } from 'rxjs';
@@ -20,11 +21,12 @@ export interface CustomControlValue{
       provide: MatFormFieldControl,
       useExisting: CustomControlComponent
       },
-      {
-        provide: NG_VALUE_ACCESSOR,
-        useExisting: CustomControlComponent,
-        multi: true
-      }],
+      // {
+      //   provide: NG_VALUE_ACCESSOR,
+      //   useExisting: CustomControlComponent,
+      //   multi: true
+      // }
+    ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CustomControlComponent implements OnInit, OnDestroy, MatFormFieldControl<CustomControlValue>, ControlValueAccessor {
@@ -56,7 +58,9 @@ export class CustomControlComponent implements OnInit, OnDestroy, MatFormFieldCo
 
     readonly stateChanges: Observable<void> = this.stateChanged.asObservable();
     @HostBinding()  readonly id = "custom-id";
-    ngControl: NgControl | null = null;
+
+    //ngControl: NgControl | null = null;
+
     focused: boolean;
 
     get empty(): boolean{
@@ -68,11 +72,13 @@ export class CustomControlComponent implements OnInit, OnDestroy, MatFormFieldCo
       return this.focused || !this.empty;
     }
 
-    @Input()
-    required: boolean;
-    @Input()
-    disabled: boolean;
-    errorState = false;
+    @Input() required: boolean;
+    @Input() disabled: boolean;
+
+    get errorState():  boolean{
+      return this.errorStateMatcher.isErrorState(this.ngControl.control as FormControl, null);
+    }
+
     controlType = 'custom-form-field';
     autofilled?: boolean;
     @HostBinding('attr.aria-user-aria-described-by')  userAriaDescribedBy = "custom-id";
@@ -82,7 +88,15 @@ export class CustomControlComponent implements OnInit, OnDestroy, MatFormFieldCo
     private _onChange: (value: CustomControlValue) => void = null;
     private _onTouched: () => void = null;
 
-  constructor( private focusMonitor: FocusMonitor) { }
+  constructor(
+    private focusMonitor: FocusMonitor,
+     @Optional() @Self() public ngControl: NgControl,
+     private errorStateMatcher: ErrorStateMatcher) {
+       if(!!ngControl){
+        ngControl.valueAccessor = this;
+       }
+
+     }
 
   ngOnInit(): void {
     this.focusMonitor.monitor(this.input).subscribe(focus => {
