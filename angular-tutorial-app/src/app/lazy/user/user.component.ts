@@ -15,6 +15,8 @@ export class UserComponent implements OnInit {
 
   user$ = new BehaviorSubject<User>(null);
 
+  isVisble = false;
+
   constructor(private router: Router, private route: ActivatedRoute) {
   }
 
@@ -23,5 +25,9 @@ export class UserComponent implements OnInit {
       const user = this.route.snapshot.data['user'];
       this.user$.next(user);
     });
+  }
+
+  toggle(){
+    this.isVisble = true;
   }
 }

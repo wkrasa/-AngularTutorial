@@ -30,7 +30,7 @@ export class ParentComponent implements OnInit, DoCheck {
   updateMessage(){
     this.message += ' 1';
     this.models[0].name = this.models[0].name + ' 1';
-    //this.models = this.createModels();
+    // this.models = this.createModels();
   }
 
   recreateModels(){
