@@ -52,6 +52,7 @@ import { ValueAccessorComponent } from './components/form/value-accessor/value-a
 import { DoubleValueComponent } from './components/form/double-value/double-value.component';
 import { CustomControlComponent } from './components/form/custom-control/custom-control.component';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
 
     // cdk
     PortalModule,

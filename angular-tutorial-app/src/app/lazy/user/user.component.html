@@ -1,2 +1,4 @@
-<p>user name: {{(user$|async)?.name}}</p>
+<p class="user">user name: {{(user$|async)?.name}}</p>
+<p class="time">{{ time$ | async}}</p>
 <h1 *ngIf="isVisble">test toggle</h1>
+
