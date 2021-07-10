@@ -53,6 +53,7 @@ import { DoubleValueComponent } from './components/form/double-value/double-valu
 import { CustomControlComponent } from './components/form/custom-control/custom-control.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { AtToolsModule } from 'at-tools';
 
 @NgModule({
   declarations: [
@@ -111,7 +112,9 @@ import { HttpClientModule } from '@angular/common/http';
      MatIconModule,
      MatCardModule,
      MatRadioModule,
-     ConfigurableModule.forRoot()//.forChild({interval: 50})
+     ConfigurableModule.forRoot(),//.forChild({interval: 50})
+
+     AtToolsModule
   ],
   providers: [{
       provide: LoggerService,

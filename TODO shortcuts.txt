@@ -1,0 +1,5 @@
+CTRL + SHIFT + . : list all symbols in current file
+CTRL + P + @ : -||-
+CTRL + P + #: search symbol in whole project
+SHIFT + ALT + F: format current document
+CTRL + D: copy line down 
