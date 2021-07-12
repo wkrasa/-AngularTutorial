@@ -16,6 +16,7 @@ import { ThirdComponent } from './components/third/third.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
 
 
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -112,6 +113,7 @@ import { AtToolsModule } from 'at-tools';
      MatIconModule,
      MatCardModule,
      MatRadioModule,
+     MatToolbarModule,
      ConfigurableModule.forRoot(),//.forChild({interval: 50})
 
      AtToolsModule

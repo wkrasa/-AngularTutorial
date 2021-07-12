@@ -1,20 +1,30 @@
-<p>lazy works!</p>
-<div>polling: {{pollingService.interval$ | async}}</div>
-<button routerLink="inner-lazy">lazy-inner</button>
-<button routerLink="inner-lazy-second">lazy-inner</button>
-<a [routerLink]="[{ outlets: { secondary: ['secondary-inner-lazy-second'] } }]">Secondary</a>
-<button [routerLink]="[{ outlets: { secondary: null } }]">Back to second</button>
-<button routerLink="../second">second</button>
-<button routerLink="second">second</button>
-<div class='secondary-outlet'>
-  <router-outlet></router-outlet>
-</div>
-<div>
-  <button routerLink="user/1">User 1</button>
-  <button routerLink="user/2">User 2</button>
-  <button routerLink="user/3">User 3</button>
-</div>
 
-<div class='secondary-outlet'>
-  <router-outlet name="secondary"></router-outlet>
-</div>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+      <div>polling: {{pollingService.interval$ | async}}</div>
+      <button mat-button routerLink="inner-lazy">lazy-inner</button>
+      <button mat-button routerLink="inner-lazy-second">lazy-inner</button>
+      <a [routerLink]="[{ outlets: { secondary: ['secondary-inner-lazy-second'] } }]">Secondary</a>
+      <button mat-button [routerLink]="[{ outlets: { secondary: null } }]">Back to second</button>
+      <button mat-button routerLink="../second">second</button>
+      <button mat-button routerLink="second">second</button>
+      <mat-card>
+        <mat-card-content>
+          <div class='secondary-outlet'>
+            <router-outlet></router-outlet>
+          </div>
+      </mat-card-content>
+      </mat-card>
+      <div>
+        <button mat-button  routerLink="user/1">User 1</button>
+        <button mat-button  routerLink="user/2">User 2</button>
+        <button mat-button  routerLink="user/3">User 3</button>
+      </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class='secondary-outlet'>
+      <router-outlet name="secondary"></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

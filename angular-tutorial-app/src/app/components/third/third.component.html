@@ -1,5 +1,10 @@
-<p>Portal</p>
-
-<div class="portal-outlet">
-  <ng-template [cdkPortalOutlet]="portal$ | async"></ng-template>
-</div>
+<mat-card>
+  <mat-card-header>
+    Portal
+  </mat-card-header>
+  <mat-card-content>
+    <div class="portal-outlet">
+      <ng-template [cdkPortalOutlet]="portal$ | async"></ng-template>
+    </div>
+  </mat-card-content>
+</mat-card>

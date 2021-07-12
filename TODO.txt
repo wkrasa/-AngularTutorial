@@ -1,16 +1,20 @@
 + create APP
-- create library
--- create folder structure: shared, core
--- in this library add module for importing all material modules
++ create library
 + add to git
 - use material elements (buttons, toolbar, ...)
+-- side nav
+--- selected url (active item)
+-- toolbar
+-- footer
+-- unify components
+-- what with lazy loaded
 + routing
 +- resolvers
 +- lazy loaded modules
 +- guards
 -- pass parmas (read more about router, activated snapshot and routing)
 + forRoot, forChild
-+dependancy injection
++ dependancy injection
 +- useClass, useExisting, useFactory, useValue,tokens, multi
 - media queries
 + portal 
@@ -25,7 +29,7 @@
 - Design patterns
 - configure CLI via angular.json file
 + drag and drop
-!- component testing
++ component testing
 !- e2e with Cypress
 - create popup component + directive
 - reactive forms with arrays
@@ -42,3 +46,4 @@
 - Paste json as code VS extension
 - rem vs em
 - bootstrap grid system
+- PWA

@@ -113,7 +113,7 @@
             "tsConfig": [
               "tsconfig.app.json",
               "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "cypress/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -121,10 +121,35 @@
           }
         },
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@briebug/cypress-schematic:cypress",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "angular-tutorial-app:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-tutorial-app:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
             "devServerTarget": "angular-tutorial-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-tutorial-app:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "angular-tutorial-app:serve",
+            "watch": true,
+            "headless": false
           },
           "configurations": {
             "production": {
@@ -161,6 +186,46 @@
             "main": "projects/at-tools/src/test.ts",
             "tsConfig": "projects/at-tools/tsconfig.spec.json",
             "karmaConfig": "projects/at-tools/karma.conf.js"
+          }
+        },
+        "cypress-run": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "at-tools:serve",
+            "configFile": "projects/at-tools/cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "at-tools:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "at-tools:serve",
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/at-tools/cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "at-tools:serve:production"
+            }
+          }
+        },
+        "e2e": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "at-tools:serve",
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/at-tools/cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "at-tools:serve:production"
+            }
           }
         }
       }
