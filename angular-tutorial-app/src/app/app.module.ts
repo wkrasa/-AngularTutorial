@@ -55,13 +55,18 @@ import { CustomControlComponent } from './components/form/custom-control/custom-
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { AtToolsModule } from 'at-tools';
-
+import { ThirdChildComponent } from './components/third/third-child/third-child.component';
+import { promisesTest } from './testing/promises';
+import { rxjsTest } from './testing/rxjs';
+import { RxjsComponent } from './components/rxjs/rxjs.component';
+import { TooltipDirective } from './components/rxjs/tooltip-directive';
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     SecondComponent,
     ThirdComponent,
+    ThirdChildComponent,
     OverlayComponent,
     InjectorsHierarchyComponent,
     FillComponent,
@@ -77,6 +82,8 @@ import { AtToolsModule } from 'at-tools';
     ValueAccessorComponent,
     DoubleValueComponent,
     CustomControlComponent,
+    RxjsComponent,
+    TooltipDirective,
   ],
   imports: [
     CommonModule,
@@ -130,4 +137,9 @@ import { AtToolsModule } from 'at-tools';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    //promisesTest();
+    //rxjsTest();
+  }
+ }

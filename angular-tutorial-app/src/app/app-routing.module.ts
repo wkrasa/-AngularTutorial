@@ -9,6 +9,7 @@ import { InjectorsHierarchyComponent } from './components/injectors-hierarchy/in
 import { LoginComponent } from './components/login/login.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
 import { ParentComponent } from './components/performance/parent/parent.component';
+import { RxjsComponent } from './components/rxjs/rxjs.component';
 import { SecondComponent } from './components/second/second.component';
 import { AuthGuardService } from './route-guards/auth-guard.service';
 
@@ -54,6 +55,10 @@ const routes: Routes = [
     path: 'value-accessor',
     component: ValueAccessorComponent
   },
+  {
+    path: 'rxjs',
+    component: RxjsComponent
+  },
   { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
   {
     path: '**',
@@ -62,7 +67,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

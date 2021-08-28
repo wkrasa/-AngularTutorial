@@ -18,6 +18,8 @@ export class ThirdComponent implements OnInit {
 
   portal$: any;
 
+  message= '123';
+
   constructor(
     private logger: LoggerService,
     public portalService: PortalService) {
