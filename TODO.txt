@@ -37,9 +37,6 @@
 + Custom Form Field Control :https://www.youtube.com/watch?v=8ThVof0Rz64&list=PLX7eV3JL9sfkREmy-qxyNqLw73y76nOHm&index=8&ab_channel=DecodedFrontend
 !- play with change detection: deattach, reattach, onPush, markForCheck, detectChanges, ngZone (https://www.mokkapps.de/blog/the-last-guide-for-angular-change-detection-you-will-ever-need/)
 !- rxjs timer and timeout
-!- animations:
--- simple one
--- complex (copy examples from the internet)
 - js modules
 - look for GIT more frequent queries
 !- snippets
@@ -48,8 +45,31 @@
 - bootstrap grid system
 - PWA
 !!- Formly
-!!- Typescript: remind types (Partial, &, |, ...)
+!!- Typescript: remind types (Partial, &, |, Unions | and Intersection &, ...)
 - js destructuring (objects and arrays)
 - Promises
 - Service Workers & PWA
 - structural directives:  https://blog.avenuecode.com/how-to-customize-your-angular-app-using-directives
+- D&D with ngrx
+- !!!Angualr reactive forms
+-- Create big reactive form with formArray, custom dynamic validation, show/hide fields
+-- start with definition of a model
+-- add validators
+--- display errors (on touched)
+-- add classes for invalid states
+-- enable/disable submit button
+-- use classes as FormGroups
+-- add control dynamically (registerControl)
+-- https://www.youtube.com/watch?v=iqXiic6hE9U&t=374s&ab_channel=NG-DEConference
+-- add tests
+--- jasmine
+--- cypress
+- angular micro syntax
+- play with ViewContainer (HostView, EmbeddedView)
+-- play with renderer
+- Add component with printscreens: change detection order + viewcheck angular core function
+-- https://www.youtube.com/watch?v=DsBy9O0c6eo&t=1431s&ab_channel=AngularConnect
+- READ ANGULAR IN DEPTH
+- read about angular overlay: https://blog.thoughtram.io/angular/2017/11/20/custom-overlays-with-angulars-cdk.html
+- read about custom injectors
+- create structural directive: carusel

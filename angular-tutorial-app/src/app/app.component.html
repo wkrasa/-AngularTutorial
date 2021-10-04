@@ -13,6 +13,7 @@
     <button mat-button routerLink="dynamic">Dynamic components</button>
     <button mat-button routerLink="value-accessor">Value accessor</button>
     <button mat-button routerLink="rxjs">Rxjs</button>
+    <button mat-button routerLink="reactive-form">Reactive form</button>
   </mat-toolbar-row>
 </mat-toolbar>
 
@@ -29,3 +30,6 @@
   <router-outlet></router-outlet>
 </mat-card>
 <at-third></at-third>
+<!-- structural directive -->
+<hr/>
+<div *appAppFor="let item in [{id: 1, name: 'test 111'}, {id: 2, name: 'test 222'}]; let i = index">{{i}} {{item.id}}: {{item.name}} </div>

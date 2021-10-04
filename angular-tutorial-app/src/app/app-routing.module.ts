@@ -4,6 +4,7 @@ import { DragAndDropComponent } from './components/drag-and-drop/drag-and-drop.c
 import { DynamicComponentsComponent } from './components/dynamic-components/dynamic-components.component';
 import { FillComponent } from './components/fill/fill.component';
 import { FirstComponent } from './components/first/first.component';
+import { ReactiveFormComponent } from './components/form/reactive-form/reactive-form/reactive-form.component';
 import { ValueAccessorComponent } from './components/form/value-accessor/value-accessor.component';
 import { InjectorsHierarchyComponent } from './components/injectors-hierarchy/injectors-hierarchy.component';
 import { LoginComponent } from './components/login/login.component';
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path: 'rxjs',
     component: RxjsComponent
+  },
+  {
+    path: 'reactive-form',
+    component: ReactiveFormComponent
   },
   { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
   {

@@ -1,0 +1,33 @@
+<ng-container *ngIf="{formValue: formValue$ | async} as state">
+  <div [formGroup]="form">
+    <label for="name">Name: </label>
+    <input type="text" class="form-control" formControlName="name">
+    <label for="name">Email: </label>
+    <input type="text" class="form-control" formControlName="email">
+
+  <p>Posts:</p>
+  <!-- TODO: move it to the child component -->
+  <button mat-button (click)="addNewPost()">Add post</button>
+  <ng-container *ngFor="let fgPost of postControls; let i=index">
+    <div [formGroup]="fgPost">
+      <label for="name">Title: </label>
+      <input type="text" class="form-control" formControlName="title">
+      <label for="name">Text: </label>
+      <input type="text" class="form-control" formControlName="text">
+      <button mat-button (click)="removePost(i)">X</button>
+    </div>
+  </ng-container>
+  <!-- <ng-container formArrayName="posts">
+    <div *ngFor="let _ of posts.controls; index as i">
+      <ng-container [formGroupName]="i">
+        <label for="name">Title: </label>
+        <input type="text" class="form-control" formControlName="title">
+        <label for="name">Text: </label>
+        <input type="text" class="form-control" formControlName="text">
+      </ng-container>
+    </div>
+  </ng-container> -->
+</div>
+</ng-container>
+<div>{{model | json}}</div>
+<div>form {{form.status}}</div>

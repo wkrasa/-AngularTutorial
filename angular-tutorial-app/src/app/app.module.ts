@@ -60,6 +60,8 @@ import { promisesTest } from './testing/promises';
 import { rxjsTest } from './testing/rxjs';
 import { RxjsComponent } from './components/rxjs/rxjs.component';
 import { TooltipDirective } from './components/rxjs/tooltip-directive';
+import { ReactiveFormComponent } from './components/form/reactive-form/reactive-form/reactive-form.component';
+import { AppForDirective } from './directives/app-for.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,6 +86,8 @@ import { TooltipDirective } from './components/rxjs/tooltip-directive';
     CustomControlComponent,
     RxjsComponent,
     TooltipDirective,
+    ReactiveFormComponent,
+    AppForDirective,
   ],
   imports: [
     CommonModule,

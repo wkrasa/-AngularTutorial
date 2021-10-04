@@ -19,6 +19,12 @@ export class RxjsComponent implements OnInit {
   ngOnInit(): void {
     this.rxjsTest();
     this.showTooltipFunc();
+    //  const aa = new Observable(o => {
+    //   o.next("");
+    //   o.error();
+    //   o.complete();
+    // });
+
   }
 
   rxjsTest(){

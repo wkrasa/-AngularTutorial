@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, Inject, Input, OnInit } from '@angular/core';
 import { AppConfig, APP_CONFIG } from './app.config';
 import { AuthService } from './services/auth.service';
 import { PortalService } from './services/portal-service/portal.service';
